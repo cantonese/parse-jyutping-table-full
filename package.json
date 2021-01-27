@@ -1,0 +1,30 @@
+{
+  "name": "parse-jyutping-table-full",
+  "version": "0.0.0",
+  "description": "Parse JPTableFull.pdf",
+  "main": "index.js",
+  "dependencies": {
+    "hkscs_unicode_converter": "^0.1.4",
+    "pdf2json": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanhammond/parse-jyutping-table-full.git"
+  },
+  "keywords": [
+    "jyutping",
+    "cantonese",
+    "JPTableFull",
+    "romanization"
+  ],
+  "author": "Nathan Hammond <github.com@nathanhammond.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nathanhammond/parse-jyutping-table-full/issues"
+  },
+  "homepage": "https://github.com/nathanhammond/parse-jyutping-table-full#readme"
+}
