@@ -285,16 +285,11 @@ function main(pages) {
         break;
         case 'en':
         case 'sc':
+        case 'jyutping':
           currentEntry.infoArray[0][fieldName] = content;
         break;
         case 'pn':
           currentEntry.infoArray[0][fieldName] = parseInt(content, 10);
-        break;
-        case 'jyutping':
-          if (content.indexOf(' ') !== -1 && !/aa6$/.test(content)) {
-            content = content.split(' ')[1];
-          }
-          currentEntry.infoArray[0][fieldName] = content;
         break;
         case 'cl':
           currentEntry.infoArray[0][fieldName] = true;
