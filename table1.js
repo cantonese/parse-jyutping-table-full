@@ -82,7 +82,7 @@ function getContent(text) {
   return decodeURIComponent(text.R[0].T);
 }
 
-function identifyField(text) {
+function identifyField(pageNumber, text) {
   var lookups = {
     ucs2: {
       x: [2.105, 10.527, 18.95, 27.372],
@@ -181,7 +181,13 @@ function identifyField(text) {
     }
   }
 
-  throw new Error('Identification failed.');
+  if (content.toString() === (pageNumber + 1).toString()) {
+    // Probably just the page number.
+    console.log(content, pageNumber);
+    console.warn("Failed to exclude page number.")
+  } else {
+    throw new Error('Identification failed.');
+  }
 }
 
 function processReferences(entry) {
@@ -265,7 +271,7 @@ function main(pages) {
         return;
       }
 
-      var fieldName = identifyField(text);
+      var fieldName = identifyField(pageNumber, text);
       if (!fieldName) {
         return;
       }
