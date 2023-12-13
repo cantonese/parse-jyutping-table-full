@@ -66,11 +66,17 @@ function main(pages) {
 
   var output = [];
   for (let i = 0; i < results.length; i += 4) {
+    let [ucs2, part, description, jyutping] = results.slice(i, i + 4);
+    let kangxi = part[part.length - 1] === "*";
+    if (kangxi) {
+      part = part.slice(0, -1);
+    }
     output.push({
-      ucs2: results[i],
-      'part': hkscs.convertString(results[i + 1]),
-      'description': hkscs.convertString(results[i + 2]),
-      'jyutping': results[i + 3]
+      ucs2,
+      part: hkscs.convertCharacter(part),
+      kangxi,
+      description: hkscs.convertString(description),
+      jyutping
     });
   }
 
