@@ -46,7 +46,7 @@ unihan.forEach(entry => {
   }
 
   if (jptablefullkeyedstring[charCode]) {
-    console.log(`-${jptablefullkeyedstring[charCode].join('\n-')}`);
+    console.log(`-${jptablefullkeyedstring[charCode].join('\n-')}`.replaceAll('kCantonese', 'JPTableFull'));
   } else {
     console.log(`-${charCode} NOT INCLUDED IN JPTABLEFULL.PDF`);
   }
