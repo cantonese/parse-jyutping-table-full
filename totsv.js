@@ -1,5 +1,5 @@
-var sourceData = require('./table1.json');
-var sourceData2 = require('./table2.json');
+var sourceData = require('./output/table1.json');
+var sourceData2 = require('./output/table2.json');
 
 var output = [];
 sourceData.forEach((character) => {

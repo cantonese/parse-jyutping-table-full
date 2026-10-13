@@ -5,11 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "hkscs_unicode_converter": "^0.1.4",
-    "pdf2json": "^1.2.0"
+    "mupdf": "^1.28.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,7 @@
     "romanization"
   ],
   "author": "Nathan Hammond <github.com@nathanhammond.com>",
-  "license": "UNLICENSED",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/cantonese/parse-jyutping-table-full/issues"
   },

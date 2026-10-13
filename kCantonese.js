@@ -1,5 +1,5 @@
 const fs = require('fs');
-var sourceData = require('./table1.json');
+var sourceData = require('./output/table1.json');
 
 console.log(`diff --git a/JPTableFull.pdf b/kCantonese.txt
 --- a/JPTableFull.pdf
